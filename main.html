@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Stephanie's Shopping List</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div id="container" class="transbox">
+		  <header>
+			<h1>Shop'n List</h1>			
+		  </header>
+			<div id="content">
+				<!-- <ul id="instructions">
+					 <li><b>Add an Item:</b>  <i>Click the Add Button or Press the Enter Key</i></li>
+					<li><b>Mark an Item Complete:</b> <i> Click the Checkbox</i></li>
+					<li><b>Take Away an Item:</b>  <i>Click Remove</i></li>
+				</ul> -->
+			<form id="frmList" class="frmList">	
+				<input type="text" name="txtAdd" id="txtAdd" class="edititem" size="55" placeholder="Enter item here">
+				<input type="submit" value="Add" name="btnSubmit" id="btnSubmit">
+				<br>
+				<input class="editunitprice" type="number" min="0.00" max="1000.00" placeholder="Unit Cost">
+				<input class="editquantity" type="number" min="1" max="1000" placeholder="Qty">
+				<ul id="list" class="ui-sortable">
+					<li class="ui-state-default">
+					</li>
+				</ul>
+				<div class="total">
+            		<div class="column actionblock pad">.</div>
+            		<div class="column itemc pad">.</div>
+            		<div class="column pad">.</div>
+            		<div class="column totalcaption">
+                		<span><b>Total:</b> </span>
+            		</div>
+            	<div class="column ">
+                	<span class="total-subtotals">$0.00</span>
+            	</div>			
+			</div><!-- end of content -->
+	</div><!-- end of container -->
+		<footer>
+			<div id="content">
+				<ul id="instructions">
+					<li><b>Add an Item:</b>  <i>Click the Add Button or Press the Enter Key</i></li>
+					<li><b>Mark an Item Complete:</b> <i> Click the Checkbox</i></li>
+					<li><b>Take Away an Item:</b>  <i>Click Remove</i></li>
+				</ul>
+			</div>
+			<!-- <div id="thinkful">
+				Page created as part of the <a href="http://www.thinkful.com">Thinkful</a> Front-End Web Development course.
+			</div> -->
+		</footer>
+		</div>
+	
+</body>		
+</html>
