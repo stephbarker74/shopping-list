@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	/* add item on button click */
-	$("#btnSubmit").click(addItem);
+	$("#btnSubmit").click(addItem(event));
 	/* add item when Enter key pressed when cursor is in textbox */
 	$("#txtAdd").keydown(function(event) {
 		var keycode = event.keyCode ? event.keyCode : event.which;
@@ -29,12 +29,13 @@ $(document).ready(function() {
 	});
 
 	/* add sorting to list */
-	$("#list").sortable({   
+	/*$("#list").sortable({   
 		placeholder: "ui-sortable-placeholder" 
-    });  
+    });*/  
 });
 
-function addItem() {
+function addItem(event) {
+	event.preventDefault();
 	var newItem = $("#txtAdd").val();
 	if(newItem.trim().length === 0) {
 		alert("You must enter an item to be added.");
