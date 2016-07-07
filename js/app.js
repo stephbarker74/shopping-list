@@ -1,53 +1,59 @@
 $(document).ready(function() {
-	/* add item on button click */
-	$("#btnSubmit").click(addItem(event));
-	/* add item when Enter key pressed when cursor is in textbox */
-	$("#txtAdd").keydown(function(event) {
-		var keycode = event.keyCode ? event.keyCode : event.which;
-		if(keycode == 13){
-			addItem();
-		}
-	});
-	/* remove item from list */
-	$("#list").on("click", "a", function() {
-		var listItem = $(this).closest("li");
-		var itemName = listItem.find("span").text();
-		var message = "Are you sure you want to remove '" + itemName + "' from the list?";
-		if(window.confirm(message)) {
-			listItem.remove();
-		}
-	});
+	$("#btnSubmit").on('click', function(event) { 
+		//stop form submit
+		event.stopPropagation(); 
+		event.preventDefault(); 
+		console.log("btnSubmit button clicked");
 
-	/* strikethrough text if checkbox selected */
-	$("#list").on("change", "input:checkbox",function () {
-		var item = $(this).closest("li").find("span");
-		if($(this).is(":checked")) {
-			item.addClass("completed");
-		}
-		else
-			item.removeClass("completed"); 
-	});
+		//get value of product input box
+		var productEntered = $("#txtAdd").val();
+		console.log("user has entered item " + productEntered);
 
-	/* add sorting to list */
-	/*$("#list").sortable({   
-		placeholder: "ui-sortable-placeholder" 
-    });*/  
+
+	//get value of price input box
+		var unitPriceEntered = $("#unitPrice").val();
+		console.log("user has entered price " + unitPriceEntered);
+	//get value of quantity input box
+		var unitQuantityEntered = $("#unitQuantity").val();
+		console.log("user has entered quantity " + unitQuantityEntered);
+
+
+
+		//trim blank space 
+		var product = $.trim(productEntered); 
+		//calculating length of product name
+		var productNameLength = product.length;
+		if (productNameLength === 0) { 
+			//alert if length is 0 to add item 
+			console.log("Please enter an item."); 
+			} 
+		else { 
+			console.log("valid item"); 
+			//else if length greater than 0 add item to list
+			$("#list").prepend("<li class=''>" + 
+							"<ul class='productDetails'>" +
+			 				"<li class='glyphicon glyphicon-ok'></li>" +
+			  				"<li class='quantity'>" + unitQuantityEntered + "</li> " + 
+							"<li class='product'>" + productEntered + "</li> " + 
+			  				"<li class='price'>$ " + unitPriceEntered + "</li> " + 
+			  				"<li class='remove-item'><button>Remove<button></li>" +
+			   				"</ul>" +
+			   				"</li>");
+
+			}; 
+			$("#txtAdd").val(" "); 
+
+		 
+		});
+
+$(".remove-item").on("click", function(){
+   $(this).closest("li").remove(); 
 });
 
-function addItem(event) {
-	event.preventDefault();
-	var newItem = $("#txtAdd").val();
-	if(newItem.trim().length === 0) {
-		alert("You must enter an item to be added.");
-        return;
-	}
-	var listItem = createListItem(newItem);
-	$("#list").append(listItem);
-	$("#txtAdd").val("");
-}
-function createListItem(newItem) {
-	var listItem = "<li class='ui-state-default'><input type='checkbox'>"; 
-	listItem += "<span>" + newItem + "</span>";
-	listItem += "<a href='#'>remove</a></li>";
-	return listItem; 
-}
+//$(".remove-item").on("click", function(event) {
+	//console.log("remove item");
+    //event.preventDefault();
+    //$(this).parent().remove();
+});
+
+

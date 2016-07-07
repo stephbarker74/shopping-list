@@ -55,6 +55,7 @@ footer {
 ul {
     list-style: none;
 }
+
 .total {
     display: table;
     position: relative;
@@ -68,7 +69,7 @@ ul {
 .column {
     position: relative;
     float: left;
-    width: 15%;
+    width: 15%
 }
 span {
     margin: 0;
@@ -77,4 +78,33 @@ span {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+}
+.productDetails {
+    display:inline-block;
+    float:left;
+}
+
+.quantity{
+    display:inline-block;
+    color: red;
+    padding-right: 2.5em;
+    padding-left: .5em;
+    float:left;
+
+}
+.product{
+    display:inline-block;
+    padding-right: 12.5em;
+    float:left;
+}
+.price{
+    display:inline-block;
+    padding-right: 4.5em;
+    float:left;
+}
+
+.remove-item{
+    display:inline-block;
+    padding-right: 0.5em;
+    float:left;
 }
