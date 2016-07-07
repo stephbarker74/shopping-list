@@ -32,11 +32,10 @@ $(document).ready(function() {
 			//else if length greater than 0 add item to list
 			$("#list").prepend("<li class=''>" + 
 							"<ul class='productDetails'>" +
-			 				"<li class='glyphicon glyphicon-ok'></li>" +
 			  				"<li class='quantity'>" + unitQuantityEntered + "</li> " + 
 							"<li class='product'>" + productEntered + "</li> " + 
 			  				"<li class='price'>$ " + unitPriceEntered + "</li> " + 
-			  				"<li class='remove-item'><button>Remove<button></li>" +
+			  				"<li class='remove-item'><button>Remove</button></li>" +
 			   				"</ul>" +
 			   				"</li>");
 

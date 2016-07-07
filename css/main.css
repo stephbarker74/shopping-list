@@ -54,6 +54,11 @@ footer {
 }
 ul {
     list-style: none;
+    padding-left:0;
+}
+
+#list {
+    padding-left: 0;
 }
 
 .total {
@@ -81,30 +86,36 @@ span {
 }
 .productDetails {
     display:inline-block;
-    float:left;
+    /*float:left;*/
+    width: 480px;
+    padding-left: 0;
 }
 
 .quantity{
     display:inline-block;
     color: red;
-    padding-right: 2.5em;
-    padding-left: .5em;
-    float:left;
+    /*padding-right: 2.5em;*/
+    /*padding-left: .5em;*/
+    width: 15%;
+    /*float:left;*/
 
 }
 .product{
     display:inline-block;
-    padding-right: 12.5em;
-    float:left;
+    /*padding-right: 12.5em;*/
+    width: 40%;
+    /*float:left;*/
 }
 .price{
     display:inline-block;
-    padding-right: 4.5em;
-    float:left;
+    /*padding-right: 4.5em;*/
+    /*float:left;*/
+    width: 15%;
 }
 
 .remove-item{
     display:inline-block;
-    padding-right: 0.5em;
-    float:left;
+    /*padding-right: 0.5em;*/
+    /*float:left;*/
+    width: 15%;
 }
