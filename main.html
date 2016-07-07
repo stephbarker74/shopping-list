@@ -11,7 +11,7 @@
 <body>
 	<div id="container" class="transbox">
 		  <header>
-			<h1>Shop'n List</h1>			
+			<h1>Shop'n List</h1>
 		  </header>
 			<div id="content">
 				<!-- <ul id="instructions">
@@ -19,16 +19,17 @@
 					<li><b>Mark an Item Complete:</b> <i> Click the Checkbox</i></li>
 					<li><b>Take Away an Item:</b>  <i>Click Remove</i></li>
 				</ul> -->
-			<form id="frmList" class="frmList">	
+			<form id="frmList" class="frmList">
 				<input type="text" name="txtAdd" id="txtAdd" class="edititem" size="55" placeholder="Enter item here">
 				<input type="submit" value="Add" name="btnSubmit" id="btnSubmit">
 				<br>
 				<input class="editunitprice" type="number" id="unitPrice" min="0.00" max="1000.00" placeholder="Unit Cost">
 				<input class="editquantity" type="number" id="unitQuantity" min="1" max="1000" placeholder="Qty">
 				<ul id="list" class="ui-sortable">
-					<li class="ui-state-default">
-					</li>
+
 				</ul>
+				<button id="remove-items">Remove Selected Items</button>
+
 				<div class="total">
             		<div class="column actionblock pad">.</div>
             		<div class="column itemc pad">.</div>
@@ -38,8 +39,13 @@
             		</div>
             	<div class="column ">
                 	<span class="total-subtotals">$0.00</span>
-            	</div>			
+            	</div>
+
+
 			</div><!-- end of content -->
+
+
+
 	</div><!-- end of container -->
 		<footer>
 			<div id="content">
@@ -54,5 +60,5 @@
 			</div> -->
 		</footer>
 		</div>
-</body>		
+</body>
 </html>
