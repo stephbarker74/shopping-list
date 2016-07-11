@@ -33,7 +33,7 @@ h1 {
 }
 #container {
     background-color: rgba(255,248,220,.8);
-    margin: 10em auto;
+    margin: 6em auto 0em auto;
     width: 600px;
     padding-left: 0em;
     border-radius: 25px;
@@ -45,7 +45,6 @@ footer {
     padding-bottom: 2px;
     background-color: #FFF8DC;
     margin: 0em auto;
-    margin-right: 2em;
     width: 588px;
     padding-left: 0em;
     padding-right: 1em;
@@ -66,7 +65,7 @@ ul {
     position: relative;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    margin-top: 11em;
+    margin-top: 8em;
     max-width: 36em;
     width: 100%;
     text-align: center;
@@ -96,26 +95,26 @@ span {
     color: red;
     /*padding-right: 2.5em;*/
     /*padding-left: .5em;*/
-    width: 15%;
+    width: 5%;
     /*float:left;*/
 
 }
 .product{
     display:inline-block;
     /*padding-right: 12.5em;*/
-    width: 40%;
+    width: 35%;
     /*float:left;*/
 }
 .price{
     display:inline-block;
     /*padding-right: 4.5em;*/
     /*float:left;*/
-    width: 15%;
+    width: 20%;
 }
 
 .remove-item{
     display:inline-block;
     /*padding-right: 0.5em;*/
     /*float:left;*/
-    width: 15%;
+    width: 5%;
 }

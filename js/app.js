@@ -2,9 +2,10 @@
 $(document).ready(function() {
 	$("#btnSubmit").on('click', function(event) {
 		//stop form submit
-		event.stopPropagation();
-		event.preventDefault();
+		 event.stopPropagation();
+		 event.preventDefault();
 		console.log("btnSubmit button clicked");
+
 
 		//get value of product input box
 		var productEntered = $("#txtAdd").val();
@@ -14,6 +15,7 @@ $(document).ready(function() {
 	//get value of price input box
 		var unitPriceEntered = $("#unitPrice").val();
 		console.log("user has entered price " + unitPriceEntered);
+
 	//get value of quantity input box
 		var unitQuantityEntered = $("#unitQuantity").val();
 		console.log("user has entered quantity " + unitQuantityEntered);
@@ -42,6 +44,8 @@ $(document).ready(function() {
 
 			}
 			$("#txtAdd").val(" ");
+			$("#unitPrice").val(" ");
+			$("#unitQuantity").val(" ");
 
 
 		});
@@ -51,4 +55,6 @@ $(document).ready(function() {
 				event.preventDefault();
 				$('.productDetails').has('input:checked').remove();
 		});
+
+		
 });
